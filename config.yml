@@ -1,0 +1,136 @@
+# UltimateStaff Configuration
+# All messages support color codes using & (e.g., &a for green, &c for red)
+
+# Database settings for punishment history and IP tracking
+database:
+  enabled: true
+  # SQLite file will be created in plugins/UltimateStaff/data.db
+  # Set to false to disable punishment history and alt checking
+
+# Ban and kick messages
+ban_messages:
+  temp_ban: |-
+    &c&lYou have been temporarily banned!
+    
+    &7Reason: &f{reason}
+    &7Expires: &f{expires}
+    &7Appeal at: &fexample.com/appeals
+
+  permanent_ban: |-
+    &c&lYou have been permanently banned!
+    
+    &7Reason: &f{reason}
+    &7Appeal at: &fexample.com/appeals
+
+  ip_ban: |-
+    &c&lYour IP has been banned!
+    
+    &7Reason: &f{reason}
+    &7Appeal at: &fexample.com/appeals
+
+  ban_attempt: "&c&l{player} &7tried to join but is banned for: &f{reason}"
+
+# Staff rank progression (LuckPerms groups)
+staff_ranks:
+  hierarchy:
+    - helper
+    - moderator
+    - admin
+    - manager
+
+  # Promotion/demotion messages
+  add_message: "&a{player} has been added as {rank}!"
+  promote_message: "&a{player} has been promoted to {rank}!"
+  remove_message: "&c{player} has been removed from staff!"
+
+# Pre-configured punishment options for /punish command
+punish_presets:
+  "1":
+    reason: "Inappropriate Language"
+    type: "tempmute"
+    duration: "1h"
+  "2":
+    reason: "Spam/Flood"
+    type: "tempmute"
+    duration: "30m"
+  "3":
+    reason: "Harassment"
+    type: "tempban"
+    duration: "1d"
+  "4":
+    reason: "Griefing"
+    type: "tempban"
+    duration: "3d"
+  "5":
+    reason: "Hacking/Cheating"
+    type: "tempban"
+    duration: "7d"
+  "6":
+    reason: "Serious Offense"
+    type: "tempban"
+    duration: "30d"
+
+# Command messages
+messages:
+  # Gamemode commands
+  gmc_self: "&aGamemode changed to &lCreative"
+  gmc_other: "&aChanged {player}'s gamemode to &lCreative"
+  gmsp_self: "&aGamemode changed to &lSpectator"
+  gmsp_other: "&aChanged {player}'s gamemode to &lSpectator"
+  gms_self: "&aGamemode changed to &lSurvival"
+  gms_other: "&aChanged {player}'s gamemode to &lSurvival"
+
+  # Flight
+  fly_enabled: "&aFlight &lenabled"
+  fly_disabled: "&cFlight &ldisabled"
+  fly_enabled_other: "&aEnabled flight for &l{player}"
+  fly_disabled_other: "&cDisabled flight for &l{player}"
+
+  # God mode
+  god_enabled: "&aGod mode &lenabled"
+  god_disabled: "&cGod mode &ldisabled"
+  god_enabled_other: "&aEnabled god mode for &l{player}"
+  god_disabled_other: "&cDisabled god mode for &l{player}"
+
+  # Vanish
+  vanish_enabled: "&aYou are invisible to all other players!"
+  vanish_disabled: "&cYou are now visible to players"
+  vanish_enabled_other: "&a{player} is now vanished"
+  vanish_disabled_other: "&c{player} is no longer vanished"
+
+  # Teleportation
+  tp_success: "&aTeleported to &l{player}"
+  tphere_success: "&aTeleported &l{player} &ato you"
+  otp_success: "&aTeleported to &l{player}'s &alast location"
+  otp_no_data: "&cNo logout data found for &l{player}"
+
+  # Punishment commands
+  tempmute_success: "&a{player} has been muted for {duration}. Reason: {reason}"
+  tempban_success: "&a{player} has been banned for {duration}. Reason: {reason}"
+  unmute_success: "&a{player} has been unmuted"
+  unban_success: "&a{player} has been unbanned"
+  banip_success: "&a{player}'s IP has been banned. Reason: {reason}"
+
+  # Media command
+  media_added: "&a{player} has been given media rank for 56 days"
+  media_removed: "&c{player}'s media rank has been removed"
+
+  # Inventory
+  invsee_opened: "&aOpened {player}'s inventory"
+
+  # Generic messages
+  player_not_found: "&cPlayer not found or not online"
+  no_permission: "&cYou don't have permission to use this command"
+  invalid_duration: "&cInvalid time format. Use examples: 1h, 30m, 1d, 1w"
+  invalid_preset: "&cInvalid preset number. Available: 1-6"
+  command_usage: "&cUsage: {usage}"
+
+  # History command
+  history_header: "&6&l=== Punishment History for {player} ==="
+  history_entry: "&7{date} &8| &c{type} &8| &7{duration} &8| &f{reason}"
+  history_empty: "&7{player} has no punishment history"
+
+  # Alts command
+  alts_header: "&6&l=== Alt Accounts for {player} ==="
+  alts_entry: "&7• &f{name} &8({ip})"
+  alts_none: "&7No alt accounts found for {player}"
