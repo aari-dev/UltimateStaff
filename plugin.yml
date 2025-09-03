@@ -1,0 +1,50 @@
+name: UltimateStaff
+version: '${version}'
+main: dev.aari.ultimatestaff.UltimateStaff
+api-version: '1.21'
+depend: [LuckPerms]
+commands:
+  gmc:
+    permission: ultimatestaff.gmc
+  gmsp:
+    permission: ultimatestaff.gmsp
+  gms:
+    permission: ultimatestaff.gms
+  fly:
+    permission: ultimatestaff.fly
+  god:
+    permission: ultimatestaff.god
+  ungod:
+    permission: ultimatestaff.ungod
+  v:
+    permission: ultimatestaff.vanish
+  vanish:
+    permission: ultimatestaff.vanish
+  tp:
+    permission: ultimatestaff.tp
+  tphere:
+    permission: ultimatestaff.tphere
+  otp:
+    permission: ultimatestaff.otp
+  history:
+    permission: ultimatestaff.history
+  tempmute:
+    permission: ultimatestaff.tempmute
+  tempban:
+    permission: ultimatestaff.tempban
+  alts:
+    permission: ultimatestaff.alts
+  invsee:
+    permission: ultimatestaff.invsee
+  media:
+    permission: ultimatestaff.media
+  staff:
+    permission: ultimatestaff.staff
+  unban:
+    permission: ultimatestaff.unban
+  unmute:
+    permission: ultimatestaff.unmute
+  banip:
+    permission: ultimatestaff.banip
+  punish:
+    permission: ultimatestaff.punish
